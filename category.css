@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    min-height: 20vh;
+    background: hsl(240, 29%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container
+{
+  position: relative;
+  width: 500px;
+   height: 500px;
+   background: hsl(0, 29%, 95%);
+   border-radius: 8px;
+   overflow: hidden;
+}
+
+.container::before
+{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 390px;
+  height: 490px;
+  background: linear-gradient(30deg,transparent,transition,#45f3ff ,#45f3ff,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  z-index: 1;
+}
+
+.container::after
+{
+   content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 390px;
+  height: 600px;
+  background: linear-gradient(30deg,transparent,transition,#45f3ff ,#45f3ff,#45f3ff );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+  z-index: 1; 
+}
+
+.containerline
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.containerline::before
+{
+    content: '';
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(30deg,transition,transition,#ff2770,#ff2770,#ff2770);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay:-4.5s;
+    z-index: 1;
+}
+.containerline::after
+{
+    content: '';
+    position: absolute;
+    top:50;
+    left: 50;
+    width: 390px;
+    height: 390px;
+    background: linear-gradient(60deg,transition,transition,#ff2770,#ff2770,#ff2770);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay:-4.5s;
+    z-index: 1;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+     {
+        transform: rotate(360deg);
+    }
+}
+
+h2{
+    color: #45f3ff;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+.table
+{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+.table input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.table span
+{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #050303;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+  button
+  {
+      width: 100%;
+      height: 40px;
+      border-radius: 40px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+  }
+  footer {
+      width: 100%;
+      height: 50px;
+      background: #ccc;
+      color: #45f3ff;
+      font-size: 18px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
